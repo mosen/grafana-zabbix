@@ -202,7 +202,7 @@ export class TriggerPanelCtrl extends MetricsPanelCtrl {
 
     // Filter triggers by severity
     problemsList = _.filter(problemsList, problem => {
-      if (problem.severity) {
+      if (problem.severity !== undefined && problem.severity !== null) {
         return this.panel.triggerSeverity[problem.severity].show;
       } else {
         return this.panel.triggerSeverity[problem.priority].show;

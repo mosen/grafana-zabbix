@@ -105,7 +105,7 @@ export default class ProblemList extends PureComponent<ProblemListProps, Problem
       { Header: 'Proxy', accessor: 'proxy', show: options.hostProxy },
       {
         Header: 'Severity', show: options.severityField, className: 'problem-severity', width: 120,
-        accessor: problem => problem.priority,
+        accessor: problem => problem.severity,
         id: 'severity',
         Cell: props => SeverityCell(props, options.triggerSeverity, options.markAckEvents, options.ackEventColor, options.okEventColor),
       },

@@ -17,7 +17,7 @@ export function joinTriggersWithProblems(problems: ZBXProblem[], triggers: ZBXTr
         triggerid: p.objectid,
         eventid: p.eventid,
         name: p.name,
-        severity: p.severity,
+        severity: p.severity ?? t.priority,
         acknowledged: p.acknowledged,
         acknowledges: p.acknowledges,
         tags: p.tags,
